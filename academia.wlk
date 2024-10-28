@@ -4,6 +4,10 @@ class Academia {
 
 	const muebles = #{} 
 
+	method dondeEstaGuardada(cosa) {
+		return muebles.find({m => m.tiene(cosa)})
+	}
+
 	method guardar(cosa) {
 	 	self.validarGuardar(cosa)
 		self.agregarAUnMueble(cosa)
